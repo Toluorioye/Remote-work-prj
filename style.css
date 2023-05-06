@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500&family=League+Gothic&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Macondo&family=Source+Sans+Pro:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw;
+    outline: none;
+}
+
+body {
+    font-family:'Epilogue', sans-serif;
+    color: hsl(0, 1%, 40%); 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px ;
+}
+header nav {
+    margin-right: 40%;
+    display: flex;
+    padding-top: 5px;
+}
+
+ 
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+  margin-right: 0;
+}
+
+ ul li a{
+    color:hsl(0, 0%, 41%) ;
+    text-decoration: none;
+/* display: block; */
+}
+ ul li{
+   margin-left: 30px; 
+   display: inline-block;
+   position: relative;
+   
+}
+
+ 
+ul .drop {
+    margin: 10px;
+    display: none;
+}
+ul .drop li{
+    width: 100px;
+    height: 24px;
+    padding: 5px;
+    text-align: left; 
+    margin-left: 2px;
+} 
+
+ul .slack {
+    margin: 0;
+    display: none;
+}
+ul .slack li{
+    width: 85px;
+    padding: 2px;
+    text-align: left; 
+    margin-left: 2px;
+}
+.menu1{  
+ padding: 2px;
+}
+#remind {
+    margin-right: 5px;
+}
+
+
+header .directory{
+/* margin-right: 3%; */
+display: flex;
+ justify-items: center; 
+align-content: center;
+color:hsl(0, 0%, 41%) ; 
+}
+#register{
+    margin-left: 35px;
+    padding: 2px 20px;
+    border-radius: 10px;
+    background-color:hsl(0, 0%, 98%) ;
+    cursor: pointer;
+    color:hsl(0, 0%, 41%) ;
+}
+#login {
+   cursor: pointer; 
+   padding: 10px;
+}
+#closemenu {
+    display: none;
+}
+#menu{
+    display: none;
+}
+
+.mobileimg{
+    display: none;
+}
+/* main body */
+.mainbd {
+    overflow: auto;
+   margin: 5% 0 8% 5%;
+}
+.imgcontainer, 
+.txtdiv {
+width: 46.5%;
+     
+}
+.imgcontainer{
+    float: right;
+}
+.txtdiv{
+    float: left;
+    width: 40%;
+    height: 30% ;
+    margin-left: 90px;
+}
+.pgimg{
+    width: 70%;
+    height: 20%;
+    margin: 0 70px;
+    margin-top: 0;
+}
+
+
+#mainheading{
+    font-weight: 650;
+  font-size: 50px;
+  padding: 10px;
+  margin: 80px 0 50px ;
+  line-height: 1.1;
+}
+.mainsubhead{
+font-size:18px;
+line-height: 1.5;
+margin-bottom: 20px;
+}
+
+#learnmore{
+    background-color:hsl(0, 0%, 8%) ;
+    color: hsl(0, 0%, 98%) ;
+    width: 30%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 10px ;
+    cursor: pointer;
+}
+.clientpic{
+    margin-top: 50px;
+}
+.clientpic img{
+    margin: 20px 10px 0 20px;
+}
+
+/* hoverrr */
+ nav ul li .specdrop:hover  {
+    background-color: black;
+    color: hsl(0, 0%, 98%);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+/* mobile look */
+@media (max-width: 765px) {
+  body, html {
+    height: 100%;
+  }
+  .bg{
+    background-image: url("./images/image-hero-mobile.png");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  nav ul  {
+    display: block;
+ margin:10% 30px 10px ;
+  }
+  nav ul li  {
+    display: block;
+    width: 30px;
+    margin-bottom: 10px;
+    color:hsl(0, 0%, 41%) ;
+  }
+  
+  #menu{ 
+    display: flex;
+  }
+  .maintxt {
+    text-align: center;
+
+  }
+    .imgcontainer{
+        display: none;
+        float: none;
+        width: 100%;
+        height: 40%;
+    }
+    .txtdiv {
+        width: 100%;
+           float: none;  
+           margin: 10px auto ;
+   }
+   #learnmore {
+    width: 50%;
+    margin: auto;
+   }
+   .sidebar {
+    min-width:500px;
+    /* max-width: 550px; */
+    height: 100vh;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 40%;
+    background-color: white;
+    display: none;
+}
+.overlay {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+#dismiss #closemenu {
+    display: flex;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    /* top right corner of the sidebar */
+    color: black;
+    top: 20px;
+    left: 45%;
+    
+}
+/* header .directory{
+    margin-right: 3%;
+    display: flex;
+     justify-items: center; 
+    align-content: center;
+    color:hsl(0, 0%, 41%) ; 
+    } */
+    /* #register{
+        margin-left: 35px;
+        padding: 2px 20px;
+        border-radius: 10px;
+        background-color:hsl(0, 0%, 98%) ;
+        cursor: pointer;
+        color:hsl(0, 0%, 41%) ;
+    }
+    #login {
+       cursor: pointer; 
+       padding: 10px;
+    }
+} */
+}
